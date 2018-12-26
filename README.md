@@ -9,12 +9,12 @@ In the Main Menu of this software, there are three menus, Task Menu, Reward Menu
 Screenshot of the Main Menu: ![](Main%20Menu.png)
 
 #Task Menu
-In the task menu, there are 5 available options which can be seen here : (SS Task menu)
+In the task menu, there are 5 available options which can be seen here : ![](Task%20Menu.png)
 The first option makes you able to add a task with specific points and deadline.
 The second option is to delete a task that you've made.
 The third option is to complete a task. The program will evaluate if you have done the task before the deadline. If you finish the task before deadline, you will get the points that you have set, and you'll get no point if you finish it after the deadline.
-Screenshot : (SS finish before deadline) (SS finish after deadline)
-The fourth option is to see tasks that you've done from the latest one to the oldest one consecutively and each shows the time they were finished. (SS Task History)
+Screenshot : ![](Success%20task.png) ![](Fail%20task.png)
+The fourth option is to see tasks that you've done from the latest one to the oldest one consecutively and each shows the time they were finished. 
 The fifth option is to go back to main menu.
 
 #Reward Menu
