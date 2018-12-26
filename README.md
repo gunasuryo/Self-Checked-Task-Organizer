@@ -72,18 +72,18 @@ qhist*qhisthead=NULL, *qhisttail=NULL;
 #History for reward and tasks
 In reward and tasks history, we use the stack method, which has the principle of 'FILO', first in last out.
 For example :
-void push( histp *topP, char info[20] );
-int isKosong( histp topP );
-void printStack( histp skrgP );
-histp stackP = NULL;
+ void push( histp *topP, char info[20] );
+ int isKosong( histp topP );
+ void printStack( histp skrgP );
+ histp stackP = NULL;
 .
 .
 .
-void push(histp *topP, char info[20]){
+ void push(histp *topP, char info[20]){
  histp newP;
  newP = malloc(sizeof(hist));
  
- if(newP!= NULL){
+  if(newP!= NULL){
   strcpy( newP->RH, info);
   strcpy( newP->time, asctime (Sys_T));
   newP->nextp = *topP;
