@@ -6,7 +6,7 @@ Teuku Salman Farizi (NPM: 1706043216) & Guna Suryo Aji (NPM: 1706043222) as the 
 #Menu
 In the Main Menu of this software, there are three menus, Task Menu, Reward Menu, and exit. In the Main menu, shown the current time of one's personal computer and current point which is saved after you close the program. So, you'll be able to retrieve the point when you open the program the following time.
 
-Screenshot of the Main Menu: ![](Main%20Menu)
+Screenshot of the Main Menu: ![](Main%20Menu.png)
 
 #Task Menu
 In the task menu, there are 5 available options which can be seen here : (SS Task menu)
