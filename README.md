@@ -74,31 +74,31 @@ qhist*qhisthead=NULL, *qhisttail=NULL;
 #History for reward and tasks
 In reward and tasks history, we use the stack method, which has the principle of 'FILO', first in last out.
 For example :
-void push( histp *topP, char info[20] );
-int isKosong( histp topP );
-void printStack( histp skrgP );
-histp stackP = NULL;
-.
-.
-.
-void push(histp *topP, char info[20]){
- histp newP;
- newP = malloc(sizeof(hist));
+	void push( histp *topP, char info[20] );
+	int isKosong( histp topP );
+	void printStack( histp skrgP );
+	histp stackP = NULL;
+	.
+	.
+	.
+	void push(histp *topP, char info[20]){
+ 	histp newP;
+ 	newP = malloc(sizeof(hist));
  
- if(newP!= NULL){
-  strcpy( newP->RH, info);
-  strcpy( newP->time, asctime (Sys_T));
-  newP->nextp = *topP;
-  *topP = newP;
- }else{
-  printf("%s tidak dimasukkan. Tidak ada memory tersedia.\n\n", info[20]);
- }
+	 if(newP!= NULL){
+ 	 strcpy( newP->RH, info);
+ 	 strcpy( newP->time, asctime (Sys_T));
+ 	 newP->nextp = *topP;
+ 	 *topP = newP;
+ 	}else{
+	  printf("%s tidak dimasukkan. Tidak ada memory tersedia.\n\n", info[20]);
+	 }
 
-}
-int isKosong( histp topP ){
- return topP == NULL;
+	}
+	int isKosong( histp topP ){
+ 	return topP == NULL;
  
-}
+	}
 
 We use the same method for both reward and tasks history, with different veriables and  "sukses" variable for task's history to determine is the task finished before deadline("sukses") or after deadline("gagal").
 
@@ -138,7 +138,7 @@ getTime(){
 #Comparing Current Time:
 We take the integer value from the Task's deadline to the current Time using if else, starting from month to minute using the function int cekdeadline(int bulan, int tanggal, int jam, int menit); This function is called each time the user uses finishtask(); function to mark a task as finished and will return the value of 1(success), or 0(failed).
 
-int cekdeadline(int bulan, int tanggal, int jam, int menit){
+	int cekdeadline(int bulan, int tanggal, int jam, int menit){
 	int deadline;
 	getTime();
 	if(Sys_T->tm_mon+1 > bulan){
