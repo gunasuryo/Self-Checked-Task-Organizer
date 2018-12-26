@@ -18,7 +18,7 @@ The fourth option is to see tasks that you've done from the latest one to the ol
 The fifth option is to go back to main menu.
 
 #Reward Menu
-In the reward menu, there are 5 available options. (SS Reward menu)
+In the reward menu, there are 5 available options. ![](Reward%20Menu.png)
 The first option is to add a reward you'd like to get, with the specific point that you need in order to get the reward. ![](Add%20Reward.png)
 The second option is to delete a reward that you don't want.![](Delete%20reward.png)
 The third option is to get a reward that has been made.
