@@ -14,16 +14,16 @@ The first option makes you able to add a task with specific points and deadline.
 The second option is to delete a task that you've made.
 The third option is to complete a task. The program will evaluate if you have done the task before the deadline. If you finish the task before deadline, you will get the points that you have set, and you'll get no point if you finish it after the deadline.
 Screenshot : ![](Success%20task.png) ![](Fail%20task.png)
-The fourth option is to see tasks that you've done from the latest one to the oldest one consecutively and each shows the time they were finished. 
+The fourth option is to see tasks that you've done from the latest one to the oldest one consecutively and each shows the time they were finished. ![](Completed%20task.png)
 The fifth option is to go back to main menu.
 
 #Reward Menu
 In the reward menu, there are 5 available options. (SS Reward menu)
-The first option is to add a reward you'd like to get, with the specific point that you need in order to get the reward. (SS Add reward)
-The second option is to delete a reward that you don't want.(SS delete reward)
+The first option is to add a reward you'd like to get, with the specific point that you need in order to get the reward. ![](Add%20Reward.png)
+The second option is to delete a reward that you don't want.![](Delete%20reward.png)
 The third option is to get a reward that has been made.
-Screenshot : (SS get reward)
-The fourth option is to see rewards that you've claimed, from the latest one to the oldest one consecutively and each shows the time they were claimed. (SS Reward History)
+Screenshot : ![](Claim%20Reward.png)
+The fourth option is to see rewards that you've claimed, from the latest one to the oldest one consecutively and each shows the time they were claimed. ![](Claimed%20Reward.png)
 The fifth option is to go back to main menu.
 
 
@@ -100,7 +100,7 @@ int isKosong( histp topP ){
  
 }
 
-We use the same method for both reward and tasks history, with different veriables.
+We use the same method for both reward and tasks history, with different veriables and  "sukses" variable for task's history to determine is the task finished before deadline("sukses") or after deadline("gagal").
 
 
 
@@ -133,4 +133,25 @@ getTime(){
         exit(EXIT_FAILURE);
     }
 
+}
+
+#Comparing Current Time:
+We take the integer value from the Task's deadline to the current Time using if else, starting from month to minute using the function int cekdeadline(int bulan, int tanggal, int jam, int menit); This function is called each time the user uses finishtask(); function to mark a task as finished and will return the value of 1(success), or 0(failed).
+
+int cekdeadline(int bulan, int tanggal, int jam, int menit){
+	int deadline;
+	getTime();
+	if(Sys_T->tm_mon+1 > bulan){
+		deadline = 0;}
+	else if(Sys_T->tm_mday > tanggal){
+			deadline = 0;}
+			else if(!Sys_T->tm_hour > jam){
+				deadline = 0;}
+				else if(Sys_T->tm_min > menit){
+					deadline = 0;}
+				else{
+					deadline = 1;
+				}
+			
+	return deadline;
 }
